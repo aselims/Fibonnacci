@@ -2,7 +2,6 @@ package co.rahala.fibonnacci;
 
 import android.util.Log;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
@@ -11,6 +10,8 @@ import java.util.ArrayList;
 public class Util {
 
     public static ArrayList<Long> fibArray = new ArrayList<Long>();
+
+    public static String FAB_NUMBER_EXTRA = "fab_number";
 
 
     public static ArrayList<Long> fibLimit(int n) {
