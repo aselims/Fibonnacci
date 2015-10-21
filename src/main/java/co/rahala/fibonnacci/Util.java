@@ -1,6 +1,10 @@
 package co.rahala.fibonnacci;
 
+import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 import java.util.ArrayList;
 
@@ -60,6 +64,20 @@ public class Util {
             next = result;
         }
         return result;
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        if (activity == null) {
+            return;
+        }
+        View focus = activity.getCurrentFocus();
+        if (focus != null) {
+            InputMethodManager inputMethodManager = (InputMethodManager)
+                    activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(
+                    focus.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN
+            );
+        }
     }
 
 

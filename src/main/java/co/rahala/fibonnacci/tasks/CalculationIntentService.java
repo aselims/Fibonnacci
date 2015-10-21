@@ -1,4 +1,4 @@
-package co.rahala.fibonnacci;
+package co.rahala.fibonnacci.tasks;
 
 import android.app.IntentService;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
+import co.rahala.fibonnacci.Util;
 import co.rahala.fibonnacci.events.FabResultEvent;
 import de.greenrobot.event.EventBus;
 
